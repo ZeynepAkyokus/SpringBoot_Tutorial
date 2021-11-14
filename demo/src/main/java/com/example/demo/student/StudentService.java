@@ -28,7 +28,7 @@ public class StudentService {
         Optional<Student> studentOptional = studentRepository.findStudentByEmail(student.getEmail());
 
         if (studentOptional.isPresent()){
-            throw new IllegalStateException("Email taken");
+            throw new IllegalStateException("Add New Student: Email is already taken");
         }
         studentRepository.save(student);
         System.out.println(student);
@@ -40,7 +40,6 @@ public class StudentService {
             throw new IllegalStateException("Student with id " + studentId +" does not exists!");
         }
         studentRepository.deleteById(studentId);
-
     }
 
     @Transactional
@@ -56,7 +55,7 @@ public class StudentService {
             // to check email have been taken, if it is throw exception, otherwise, update
             Optional<Student> studentOptional = studentRepository.findStudentByEmail(email);
             if (studentOptional.isPresent()){
-                throw new IllegalStateException("Email taken");
+                throw new IllegalStateException("Update Student: Email taken");
             }
 
             student.setEmail(email);
