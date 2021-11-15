@@ -19,7 +19,9 @@ public class StudentConfig {
             Student ahmet = new Student("Ahmet", "ahmet@gmail.com",
                     LocalDate.of(2002, 6, 26));
 
-            repository.saveAll(List.of(zeynep,ahmet));
+            Student ali = new Student("Ali","ali@gmail.com",LocalDate.parse("1995-11-23"));
+
+            repository.saveAll(List.of(zeynep,ahmet,ali));
         };
     }
 }

@@ -27,8 +27,8 @@ public class StudentController {
         return "student";
     }
 
-    // To be done --> change birth of date input to datepicker in student.html
-    //                add form validation to show exception
+    // To be done --> add form validation to show exception
+    @ResponseStatus
     @PostMapping
     public String registerNewStudent(@ModelAttribute("stud") Student student){
         try {

@@ -70,9 +70,12 @@ public class Student {
         return dob;
     }
 
-    public void setDob(LocalDate dob) {
-        this.dob = dob;
+    public void setDob(String dob) {
+        LocalDate dobLocal = LocalDate.parse(dob);
+        this.dob = dobLocal;
     }
+
+//    public void setDob(LocalDate dob) {this.dob = dob;}
 
     public Integer getAge() {
         return Period.between(this.dob,LocalDate.now()).getYears();
