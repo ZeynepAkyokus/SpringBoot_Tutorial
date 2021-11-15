@@ -1,5 +1,5 @@
-# SpringBoot_Tutorial_Amigoscode
-       
+# SpringBoot_Tutorial
+
 This web application is made by following amigoscode's [Spring Boot Tutorial](https://www.youtube.com/watch?v=9SGDpanrc8U).
 
 
